@@ -30,4 +30,8 @@ export default {
     </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.main-navbar {
+    background: #0182F9;
+}
+</style>
