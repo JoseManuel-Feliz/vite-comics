@@ -72,7 +72,14 @@ export default {
                 </ul>
             </div>
         </div>
+        <div>
+            <img src="../assets/img/dc-logo-bg.png" alt="">
+        </div>
     </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+footer {
+    background: url('../assets/img/footer-bg.jpg') 0 0 / contain no-repeat;
+}
+</style>
