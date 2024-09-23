@@ -28,9 +28,33 @@ export default {
 
 <template>
     <li>
-        <img :src="comicUrl" :alt="comicSeries">
+        <div class="comic-img wrapper">
+            <img :src="comicUrl" :alt="comicSeries">
+        </div>
         <p>{{ comicSeries }}</p>
     </li>
 </template>
 
-<style scoped></style>
+<style scoped>
+li {
+    flex-basis: calc(100% / 6);
+    margin: 10px 0;
+
+    .comic-img {
+        max-width: 150px;
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-position: left;
+
+    }
+
+    p {
+        margin-top: 5px;
+        color: #fff;
+    }
+
+}
+</style>
