@@ -76,7 +76,10 @@ export default {
             <div class="navbar">
                 <nav>
                     <ul>
-                        <li v-for="link in navbarLinks"><a :href="link.url">{{ link.label }} </a> </li>
+                        <li v-for="(link, index) in navbarLinks" :key="index">
+                            <a :href="link.url" :class="{ active: link.active }">
+                                {{ link.label }} </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -117,6 +120,7 @@ header {
                     &:hover,
                     &.active {
                         color: #0182F9;
+                        border-bottom: 10px solid;
                     }
 
                 }
