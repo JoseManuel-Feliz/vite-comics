@@ -2,6 +2,58 @@
 export default {
     data() {
         return {
+            navbarLinks: [
+                {
+                    label: "CHARACTERS",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "COMICS",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "MOVIES",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "TV",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "GAMES",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "COLLECTIBLES",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "VIDEOS",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "FANS",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "NEWS",
+                    url: "#",
+                    active: "false",
+                },
+                {
+                    label: "SHOP",
+                    url: "#",
+                    active: "false",
+                },
+            ]
 
         }
     }
@@ -24,16 +76,7 @@ export default {
             <div class="navbar">
                 <nav>
                     <ul>
-                        <li><a href="#">CHARACTERS</a></li>
-                        <li><a href="#">COMICS</a></li>
-                        <li><a href="#">MOVIES</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">GAMES</a></li>
-                        <li><a href="#">COLLECTIBLES</a></li>
-                        <li><a href="#">VIDEOS</a></li>
-                        <li><a href="#">FANS</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">SHOP</a></li>
+                        <li v-for="link in navbarLinks"><a :href="link.url">{{ link.label }} </a> </li>
                     </ul>
                 </nav>
             </div>
