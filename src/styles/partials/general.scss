@@ -2,21 +2,24 @@
 *{margin: 0;
   padding: 0;
   box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;  
+font-family: Arial, Helvetica, sans-serif; 
 }
 
 /* GENERICS */
 body{
   background-color: black;
-  padding: 50px 0
 }
   ul{
     list-style-type: none;  
-      a{
-        text-decoration: none;
-        color: inherit;
-      }
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+    
+    /* UTILS */
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    
-    
   
