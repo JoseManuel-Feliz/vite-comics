@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-
+    {{ comicSeries }}
 </template>
 
 <style scoped></style>
