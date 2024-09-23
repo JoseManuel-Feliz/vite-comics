@@ -101,7 +101,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-* {
-    color: #ffff;
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    p {
+        color: #ffff;
+    }
 }
 </style>

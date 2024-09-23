@@ -61,7 +61,6 @@ export default {
         <section>
             <div class="content-wrapper">
                 <MainComicslist />
-                <p class="main-content">--> content goes here <-- </p>
             </div>
         </section>
 
@@ -95,14 +94,9 @@ main {
         .content-wrapper {
             margin: 0 auto;
             max-width: 1200px;
-            height: 150px;
             display: flex;
             align-items: center;
 
-            p {
-                font-size: 2rem;
-                color: #fff;
-            }
         }
     }
 
