@@ -3,7 +3,7 @@ import MainComicslist from './MainComicsList.vue';
 
 export default {
     components: {
-        MainComicsList
+        MainComicslist
     },
 
     data() {
@@ -12,37 +12,50 @@ export default {
                 {
                     label: "DIGITAL COMICS",
                     url: "#",
-                    imgUrl: "buy-comics-digital-comics",
+                    imgUrl: "buy-comics-digital-comics.png",
+                    imgAlt: "digital-comics",
                 },
                 {
                     label: "DC MERCHANDISE",
                     url: "#",
-                    imgUrl: "buy-comics-merchandise",
+                    imgUrl: "buy-comics-merchandise.png",
+                    imgAlt: "merchandise.png",
                 },
                 {
                     label: "SUBCRIPTION",
                     url: "#",
-                    imgUrl: "buy-comics-subscriptions",
+                    imgUrl: "buy-comics-subscriptions.png",
+                    imgAlt: "subscriptions.png",
                 },
                 {
                     label: "COMIC SHOP LOCATOR",
                     url: "#",
-                    imgUrl: "buy-comics-shop-locator",
+                    imgUrl: "buy-comics-shop-locator.png",
+                    imgAlt: "shop-locator",
                 },
                 {
                     label: "DIGITAL COMICS",
                     url: "#",
-                    imgUrl: "buy-dc-power-visa",
+                    imgUrl: "buy-dc-power-visa.svg",
+                    imgAlt: "power-visa",
                 },
-
+            ]
         }
-    }
-}
+    },
+    computed: {
 
+    },
+    methods: {
+        getImgURL(imagePath) {
+            return new URL(`../assets/img/${imagePath}`, import.meta.url).href
+        }
+    },
+
+}
 </script>
 
 <template>
-    <MainComicsList />
+    <MainComicslist />
 
     <main>
 
@@ -56,8 +69,9 @@ export default {
             <nav class="main-navbar">
                 <ul>
 
-                    <li><a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                            <p>DIGITAL COMICS</p>
+                    <li v-for="itemBanner in mainBanner"><a :href="itemBanner.url"><img
+                                :src="getImgURL(itemBanner.imgUrl)" :alt="itemBanner.imgALT">
+                            <p>{{ itemBanner.label }}</p>
                         </a>
                     </li>
 

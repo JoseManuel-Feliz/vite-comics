@@ -1,6 +1,9 @@
 <script>
 export default {
     data() {
+        return {
+
+        }
 
     }
 
@@ -9,7 +12,7 @@ export default {
 </script>
 
 <template>
-
+    <h1>buy-comics-digital-comics</h1>
 </template>
 
-<style></style>
+<style scoped></style>
