@@ -1,4 +1,6 @@
 <script>
+import MainComicsListItem from "./MainComicsListItem"
+
 export default {
     data() {
         return {
@@ -86,7 +88,8 @@ export default {
 </script>
 
 <template>
-    <h1>buy-comics-digital-comics</h1>
+
+    <MainComicsListItem />
 </template>
 
 <style scoped></style>
