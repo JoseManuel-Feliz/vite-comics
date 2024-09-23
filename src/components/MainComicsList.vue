@@ -2,6 +2,9 @@
 import MainComicsListItem from "./MainComicsListItem.vue"
 
 export default {
+    components: {
+        MainComicsListItem
+    },
     data() {
         return {
             comics: [
@@ -97,4 +100,8 @@ export default {
 
 </template>
 
-<style scoped></style>
+<style scoped>
+* {
+    color: #ffff;
+}
+</style>
