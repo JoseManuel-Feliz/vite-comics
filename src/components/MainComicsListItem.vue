@@ -6,7 +6,7 @@ export default {
         }
     },
     props: {
-        comicsUrl: {
+        comicUrl: {
             required: true,
             type: String
         },
@@ -28,7 +28,8 @@ export default {
 
 <template>
     <li>
-        {{ comicSeries }}
+        <img :src="comicUrl" :alt="comicSeries">
+        <p>{{ comicSeries }}</p>
     </li>
 </template>
 

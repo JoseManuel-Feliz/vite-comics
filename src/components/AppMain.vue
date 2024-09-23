@@ -55,12 +55,12 @@ export default {
 </script>
 
 <template>
-    <MainComicslist />
 
     <main>
 
         <section>
             <div class="content-wrapper">
+                <MainComicslist />
                 <p class="main-content">--> content goes here <-- </p>
             </div>
         </section>
