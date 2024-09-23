@@ -1,7 +1,39 @@
 <script>
+import MainComicslist from './MainComicsList.vue';
+
 export default {
+    components: {
+        MainComicsList
+    },
+
     data() {
         return {
+            mainBanner: [
+                {
+                    label: "DIGITAL COMICS",
+                    url: "#",
+                    imgUrl: "buy-comics-digital-comics",
+                },
+                {
+                    label: "DC MERCHANDISE",
+                    url: "#",
+                    imgUrl: "buy-comics-merchandise",
+                },
+                {
+                    label: "SUBCRIPTION",
+                    url: "#",
+                    imgUrl: "buy-comics-subscriptions",
+                },
+                {
+                    label: "COMIC SHOP LOCATOR",
+                    url: "#",
+                    imgUrl: "buy-comics-shop-locator",
+                },
+                {
+                    label: "DIGITAL COMICS",
+                    url: "#",
+                    imgUrl: "buy-dc-power-visa",
+                },
 
         }
     }
@@ -10,6 +42,8 @@ export default {
 </script>
 
 <template>
+    <MainComicsList />
+
     <main>
 
         <section>
@@ -26,19 +60,7 @@ export default {
                             <p>DIGITAL COMICS</p>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assets/img/buy-comics-merchandise.png" alt="">
-                            <p>DC MERCHANDISE</p>
-                        </a></li>
-                    <li><a href="#"><img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                            <p>SUBCRUPTION</p>
-                        </a></li>
-                    <li><a href="#"><img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                            <p>COMIC SHOP LOCATOR</p>
-                        </a>
-                    </li>
-                    <li><a href="#"><img class="w-60" src="../assets/img/buy-dc-power-visa.svg" alt="">
-                            <p>DC POWER VISA</p>
-                        </a></li>
+
                 </ul>
             </nav>
         </section>
