@@ -1,5 +1,5 @@
 <script>
-import MainComicsListItem from "./MainComicsListItem"
+import MainComicsListItem from "./MainComicsListItem.vue"
 
 export default {
     data() {
@@ -88,8 +88,13 @@ export default {
 </script>
 
 <template>
+    <ul>
 
-    <MainComicsListItem />
+        <MainComicsListItem v-for="(comic, index) in comics" :key="index" :comicUrl="comic.thumb"
+            :comicPrice="comic.price" :comicSeries="comic.series" :comicType="comic.type" />
+
+    </ul>
+
 </template>
 
 <style scoped></style>
