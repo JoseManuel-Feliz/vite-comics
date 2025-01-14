@@ -59,13 +59,16 @@ export default {
     <main>
 
         <section>
-            <div class="content-wrapper">
+            <div class="content-wrapper container">
                 <MainComicslist />
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn">Load more</a>
             </div>
         </section>
 
-        <section class="wrapper main-navbar">
-            <nav class="main-navbar">
+        <section class="main-navbar">
+            <nav class="container">
                 <ul>
 
                     <li v-for="itemBanner in mainBanner"><a :href="itemBanner.url"><img
@@ -76,6 +79,7 @@ export default {
 
                 </ul>
             </nav>
+
         </section>
     </main>
 </template>
@@ -86,58 +90,55 @@ main {
     display: flex;
     flex-direction: column;
 
-    section {
-        flex-grow: 1;
+    .content-wrapper {
+        display: flex;
+        align-items: center;
 
-
-
-        .content-wrapper {
-            margin: 0 auto;
-            max-width: 1200px;
-            display: flex;
-            align-items: center;
-
-        }
     }
 
-    .wrapper.main-navbar {
-        background: #0182F9;
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
 
-        .main-navbar {
-            max-width: 1200px;
-            margin: 0 auto;
+        a.btn {
+            background-color: #0182F9;
+            color: #fff;
+            padding: 15px 25px;
+        }
+    }
+}
+
+.main-navbar {
+    background: #0182F9;
 
 
-            ul {
+
+    ul {
+        display: flex;
+        height: 150px;
+
+
+
+        li {
+            flex-basis: calc(100% / 5);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            a {
                 display: flex;
-                height: 150px;
+                height: 50px;
 
-
-
-                li {
-                    flex-basis: calc(100% / 5);
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-
-                    a {
-                        display: flex;
-                        height: 50px;
-
-                        p {
-                            align-self: center;
-                            color: #fff;
-                            margin-left: 10px;
-                            font-size: 18px;
-                        }
-                    }
+                p {
+                    align-self: center;
+                    color: #fff;
+                    margin-left: 10px;
+                    font-size: 18px;
                 }
             }
         }
 
-        .w-60 {
-            width: 60px;
-        }
     }
 }
 </style>
